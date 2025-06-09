@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Vid2Coach: Transforming How-To Videos into Task Assistants</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.35.2/gradio.js">
+  </script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title publication-title">Vid2Coach: Transforming How-To Videos into Task Assistants</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://www.minahuh.com" target="_blank">Mina Huh</a>,</span>
+              <span class="author-block">
+                <a href="https://zihuixue.github.io/" target="_blank">Zihui Xue</a>,</span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/ujjainidas" target="_blank">Ujjaini Das</a>,</span>
+                <br />
+              <span class="author-block">
+                <a href="https://ashutoshkr.me/" target="_blank">Kumar Ashutosh</a>,</span>
+              <span class="author-block">
+                <a href="https://www.cs.utexas.edu/~grauman/" target="_blank">Kristen Grauman</a>,</span>
+              <span class="author-block">
+                <a href="http://www.amypavel.com" target="_blank">Amy Pavel</a>,</span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The University of Texas at Austin
+                 <!-- <br><br><b>COLM 2024<span style="color: red;"> Oral Spotlight (Top 2%)</span></b> -->
+                </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.00717" target="_blank"
+                      class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Arxiv</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="https://minahuh.com/LFVQA/COLM_poster.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Poster</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="/LFVQA/explorer.html" target="_blank" class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="fa fa-search"></i>
+                    </span>
+                    <span>Data Explorer</span>
+                  </a>
+                </span> -->
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/UT-CS-HCI/lfvqa" target="_blank"
+                    class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Data & Code</span>
+                  </a>
+                </span> -->
+                <!-- Demo link -->
+                <span class="link-block">
+                  <a href="https://youtu.be/M0j2TmezItI" class="external-link button is-normal is-rounded ">
+                    <span class="icon">
+                      <i class="fa fa-video"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+
+
+
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2302.14117" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <div class="hero-body">
+        <!-- add border -->
+        <img src="static/images/teaser-proactive_compressed.jpg" style="margin-bottom: 2%; " alt='A figure shows an accessible cooking support system helping a blind user slice bell peppers. On the left, a How-To Video shows a person preparing food, and Accessible Resources highlight blind cooking tips. Arrows point to the center, where a blind user wearing meta glasses and an apron slices yellow bell peppers on a cutting board. The user asks, “I’m not confident with knives. Any tips?” and “Does this look complete?” Three guidance sections are displayed: 1. Instructions & Demonstration Details: Slice bell peppers. In the video, the person slices yellow and red bell peppers into thin 1/4 inch wide strips using a kitchen knife and wooden cutting board. 2. Accessible Tips & Workarounds: Use kitchen scissors to cut peppers directly over a tray or bowl, so you can easily find all the pieces with touch. Or, you can wear a cut resistant glove. 3. Proactive Progress Feedback: You don’t seem to be done yet because there are still some larger yellow pepper pieces on the right side. Try feeling for any thicker slices and trimming them down so they match the thinner ones. Keep going, you’re almost there!'        width="100%" />
+        <h2 class="subtitle has-text-centered">
+          Vid2Coach is a system that transforms how-to videos into a wearable camera-based task assistant that provides accessible instructions and mixed-initiative feedback. Given a how-to video, Vid2Coach extracts high-level steps and demonstration details, then for each step we use retrieval-augmented generation to supplement each step with BLV-specific guidelines. Vid2Coach then monitors user progress with a camera in smart glasses to provide proactive feedback.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              People use videos to learn new recipes, exercises, and crafts. Such videos remain difficult for blind and low vision (BLV) people to follow as they rely on visual comparison. Our observations of visual rehabilitation therapists (VRTs) guiding BLV people to follow how-to videos revealed that VRTs provide both proactive and responsive support including detailed descriptions, non-visual workarounds, and progress feedback.We propose Vid2Coach, a system that transforms how-to videos intowearable camera-based assistants that provide accessible instructions and mixed-initiative feedback. From the video, Vid2Coach generates accessible instructions by augmenting narrated instructions with demonstration details and completion criteria for each step. It then uses retrieval-augmented-generation to supplement non-visual workarounds from BLV-specific resources. Vid2Coach then monitors user progress with a camera embedded in commercial smart glasses to provide context-aware instructions, proactive feedback, and answers to user questions. BLV participants (N=8) using Vid2Coach completed cooking tasks with 58.5% fewer errors than when using their typical workflow and wanted to use Vid2Coach in their daily lives. Vid2Coach demonstrates an opportunity for AI visual assistance that strengthens rather than replaces non-visual expertise
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Observational Study</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/formative_study.jpg" alt="The image shows a formative study setup where a vision rehabilitation therapist (VRT) remotely monitors a blind participant (BLV) cooking through a live video stream from the participant’s smart glasses. On the left, the blind participant is cooking at a stovetop, while on the right, the VRT watches the video feed and provides guidance via a computer setup with dual monitors. Below, three completed dishes made by the participant are displayed: a tray of freshly baked chocolate chip cookies, a pavlova topped with whipped cream and fresh berries, and a plate of eggs Benedict featuring poached eggs on an English muffin with ham." width="50%" /><br/><br/>
+            <h2 class="subtitle has-text-centered">
+              To inform our system design, we observed how VRTs deliver real-time remote guidance to BLV individuals in following how-to videos while observing their progress through the smart glasses' video stream.
+            </h2>
+          </div>
+        </div>
+        <br><hr style="background-color: lightgray;"><br><br>
+        <h2 class="title is-3">Design Goals</h2><br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="container">
+              <div class="columns is-multiline is-variable is-6">
+                <!-- Top row: 3 cards -->
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D1.</strong> Provide instructions based on both narration and visual demonstrations of how-to videos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D2.</strong> Supplement instructions with accessible tips and workarounds.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D3.</strong> Provide proactive visual feedback on user progress.</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Bottom row: 3 cards -->
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D4.</strong> Encourage users to leverage non-visual sensory cues to evaluate progress.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D5.</strong> Address users’ diverse questions with responses grounded in users’ task progress and how-to video knowledge.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="card is-flex is-flex-direction-column is-fullheight has-text-grey-dark" style="font-weight: 400; line-height: 1.8; font-size: 1.25rem;">
+                    <div class="card-content">
+                      <p><strong>D6.</strong> Adapt instructions and feedback to user preference, skills, and context.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+<br><hr style="background-color: lightgray;"><br>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">System</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/pipeline1.jpg" width="60%"
+            alt='Diagram showing how Vid2Coach generates accessible cooking instructions from a how-to video using multimodal understanding and retrieval-augmented generation (RAG). On the left, frames from a video show someone preparing bell peppers, with narration: Now, I’m preparing the bell pepper for toppings. Arrows labeled A (Multimodal Understanding) and B (Multimodal RAG) lead into a flowchart. The system first generates a High-level Instruction: Slice 2 bell peppers for toppings. Then it adds Demonstration Details: The person is slicing one red and one yellow bell pepper using a sharp chef’s knife on a sturdy wooden cutting board. After cutting them into 2-inch pieces, they place them on a paper plate with herbs and olives. Finally, it provides Tips and Workarounds based on user needs. For low vision: use high color contrast cutting board. For blind users: use a plunge chopper or kitchen scissors. Accessible resources like guidelines and videos are shown on the right as input to the RAG module.'            /><br/><br/>
+            <h3 class="subtitle">
+              Vid2Coach generates step instructions from a how-to video with multi-modal understanding of narration and frames (A), and supplements tips and workarounds from accessibility task resources using RAG (B).
+            </h3>
+          </div>
+        </div>
+        <br><hr style="background-color: lightgray;"><br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths"><br/>
+            <img src="static/images/qual-examples-3.jpg" width="100%"
+            alt='Side-by-side comparison of Vid2Coach and state-of-the-art VLMs (LLaVA-OV, Gemini, GPT-4o) on two cooking video segments, with screenshots and corresponding descriptions. On the left, a chef adds tarragon vinegar to egg yolks. The narration briefly says: Tarragon vinegar, pop that into the eggs. Vid2Coach provides a detailed task-relevant description including the tool used and substitution advice. LLaVA-OV gives a vague overview, highlighting background elements and adding hallucinated details, which are marked in orange and red. On the right, a chef places bacon on a breakfast dish. The narration simply states: I think that is the perfect breakfast. Vid2Coach describes precise hand actions and the visual result, while Gemini and GPT-4o offer less detailed summaries, adding hallucinated content about emotions and declarations. The figure emphasizes how Vid2Coach adds new task-relevant details (blue) and avoids hallucinations (red) or generic content (orange).'
+            /><br/><br/>
+            <h3 class="subtitle">
+              Qualitative comparisons of Vid2Coach descriptions with SOTA VLMs on 2 action sequences. These VLM descriptions often include hallucinations (red) and less task-relevant details (orange). Vid2Coach was able to capture new task-relevant details not covered in the narration (blue).
+            </h3>
+          </div>
+        </div>
+        <br><hr style="background-color: lightgray;"><br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths"><br/>
+            <img src="static/images/pipeline3.jpg" width="60%"
+            alt='Diagram illustrating how a system provides progress feedback for a durative cooking action from a how-to video: Melt the butter on medium-low heat until it is brown. The top row shows video frames of butter gradually melting and browning in a pan. Below, three labeled completion criteria define stages: Irrelevant – No butter is visible in the pan; In-Progress – Butter is visible in solid form or liquefying as it melts in bright yellow color; and Complete – The butter is a deep golden brown color. A user’s video stream is shown progressing from turning on the stove to melting butter, with color-coded markers matching the stages. The system offers proactive feedback such as: Great, the butter is melting and is bubbling; and later: You seem to be complete because the butter looks golden brown.'
+            /><br/><br/>
+            <h3 class="subtitle">
+              From the how-to video, Vid2Coach generates criteria for classifying user status into irrelevant, in-progress, and complete. As user performs the task, Vid2Coach monitors the progress and provide realtime feedback.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<br><hr style="background-color: lightgray;"><br>
+
+
+
+
+    <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Evaluation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/eval_setup.jpg" width="70%" /><br><br>
+          <h2 class="subtitle has-text-centered">
+            In the baseline condition, participants used their phones to listen to the video instructions (A) or call visual interpreters to get feedback (B). In the Vid2Coach condition, participants wore Meta glasses and used free-form speech to interact with the system.
+        </h2>
+        </div>        
+      </div>
+      <br><hr style="background-color: lightgray;"><br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths"><br/>
+            <img src="static/images/eval_interactions.jpg" width="85%"
+              alt="The figure shows step completion (left) and user-initiated interactions (right) for each participant across two tasks, comparing the Vid2Coach condition to the baseline condition. Each row represents a participant and each column a step in the task. The left panel visualizes whether each step was completed correctly, in the wrong order, omitted, or skipped due to technical errors. The right panel shows the type and frequency of user-initiated interactions during the task, such as navigation questions, progress checks, and external help. Overall, participants using Vid2Coach completed more steps correctly and interacted more frequently with the system, while baseline participants showed more errors, omissions, and reliance on human or AI agents." /><br/><br/>
+            <h3 class="subtitle">
+              Step completion (left) and user-initiated interactions (right) visualized across participants. Each row represents a participant, and each column a step in the task. For Vid2Coach, note that we only included user-initiated interactions and not Vid2Coach’s consistent feedback for brevity.
+            </h3>
+          </div>
+        </div>
+        <br><hr style="background-color: lightgray;"><br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths"><br/>
+            <img src="static/images/likert-3.jpg" width="60%"
+              alt="Bar chart comparing user rating distributions between Baseline and Vid2Coach conditions across multiple measures, with ratings ranging from 1 (negative) to 7 (positive). Measures include helpfulness of instruction and feedback, knowledge gain, ease of navigation, mental, physical, and temporal demand, frustration, effort, and performance. Statistically significant differences are marked: Vid2Coach significantly outperformed the baseline in 8 out of 10 categories, including mental demand, frustration, effort, instruction helpfulness, ease of navigation, and performance. (marked with * for p < 0.05 and ** for p < 0.01)." /><br/><br/>
+            <h3 class="subtitle">
+              Distribution of the rating scores for the Baseline and Vid2Coach (1 = negative, 7 = positive). The asterisks indicate the statistical significance as a result of Wilcoxon text ( p < 0.05 is marked with * and p < 0.01 is marked with **).
+            </h3><br><br>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+     <!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Demo Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/M0j2TmezItI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{huh2025vid2coach,
+          title={Vid2Coach: Transforming How-To Videos into Task Assistants},
+          author={Huh, Mina and Xue, Zihui and Das, Ujjaini and Ashutosh, Kumar and Grauman, Kristen and Pavel, Amy},
+          journal={arXiv preprint arXiv:2506.00717},
+          year={2025}
+        }</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a>.
+                <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
